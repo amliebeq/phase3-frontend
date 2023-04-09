@@ -14,7 +14,7 @@ console.log(playersObjects)
 
   return (
     <div>
-      <Main playersObjects = {playersObjects} />
+      <Main playersObjects = {playersObjects} setPlayersObjects={setPlayersObjects}/>
     </div>
   );
 }

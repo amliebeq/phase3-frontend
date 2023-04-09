@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import Filter from "./Filter";
+import Form from "./Form";
 
-function Main({ playersObjects }) {
+function Main({ playersObjects, setPlayersObjects }) {
     let [player, setPlayer] = useState('')
     
     function handlePlayerChange (e) {
@@ -20,6 +21,7 @@ function Main({ playersObjects }) {
     return (
         <div>
             <Filter onPlayerChange={handlePlayerChange}/>
+            <Form playersObjects = {playersObjects} setPlayersObjects={setPlayersObjects}/>
             {playersList}
         </div>
     )
