@@ -20,9 +20,10 @@ function Main({ playersObjects, setPlayersObjects }) {
     
     return (
         <div>
-            <Filter onPlayerChange={handlePlayerChange}/>
+            <h1>Player Nickname Library</h1>
             <Form playersObjects = {playersObjects} setPlayersObjects={setPlayersObjects}/>
-            {playersList}
+            <Filter onPlayerChange={handlePlayerChange}/>
+            <div className="card-container">{playersList}</div>
         </div>
     )
 

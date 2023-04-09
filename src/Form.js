@@ -73,31 +73,27 @@ function Form ({ playersObjects, setPlayersObjects }) {
         return(
             <div>
                 <form onSubmit={handleSubmit}>
-                    <label>name</label>
-                    <input type="Text" value={name} onChange={handleNameChange} />
-                    <label>Sport</label>
-                    <input type="Text" value={sport} onChange={handleSportChange} />
-                    <label>Refernce page URL</label>
-                    <input type="Text" value={reference} onChange={handleReferenceChange} />
+                    <label>Add a new player!</label>
+                    <input type="Text" value={name} onChange={handleNameChange} placeholder="Name"/>
+                    <input type="Text" value={sport} onChange={handleSportChange} placeholder="Sport"/>
+                    <input type="Text" value={reference} onChange={handleReferenceChange} placeholder="Refernce page URL"/>
                     <button type='submit'>submit</button>
                 </form>
                 <form onSubmit={handleNicknameSubmit}>
-                    <label>Add the ID of the player with the new nickname</label>
-                    <input type="TEXT" value={athleteId} onChange={handleAthleteId} />
-                    <label>Add a new nickname here</label>
-                    <input type="TEXT" value={newNickname} onChange={handleNewNickname} />                    
+                    <label>Add a new nickname!</label>
+                    <input type="number" min="0" value={athleteId} onChange={handleAthleteId} placeholder="Player id"/>
+                    <input type="TEXT" value={newNickname} onChange={handleNewNickname} placeholder="Nickname"/>                    
                     <button type="SUBMIT">Add new nickname</button>
                 </form>
                 <form onSubmit={handleDelete}>
-                    <label>Delet a nickname here using hte nickname id</label>
-                    <input type="Text" value={id} onChange={handleIdChange} />
+                    <label>Delete a nickname</label>
+                    <input type="number" min="0" value={id} onChange={handleIdChange} placeholder="Nickname ID"/>
                     <button type='submit'>Delete</button>
                 </form>
                 <form onSubmit={handlePatch}>
-                    <label>Add the ID of the nickname you would like to edit</label>
-                    <input type="TEXT" value={editId} onChange={handleEditId} />
-                    <label>Add the corrected nickname</label>
-                    <input type="TEXT" value={editNickname} onChange={handleEditNickname}></input>
+                    <label>Edit a nickname</label>
+                    <input type="number" min="0" value={editId} onChange={handleEditId} placeholder="Nickname ID"/>
+                    <input type="TEXT" value={editNickname} onChange={handleEditNickname}placeholder="Corrected Nickname"></input>
                     <button type='submit'>Submit</button>
                 </form>
             </div>

@@ -3,8 +3,8 @@ import React from "react";
 function Filter({ onPlayerChange }) {
 
     return(
-        <form>
-            <label>Find your favorite player here!</label>
+        <form className='Filter'>
+            <label>Find your favorite player by name!</label>
             <input type="Text" placeholder="Find your favorite player(s) by name"  onChange={onPlayerChange}/>
         </form>
     )
