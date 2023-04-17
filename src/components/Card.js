@@ -4,17 +4,16 @@ function Card({ id, name, nicknames, reference, sport }) {
     
     let nicknameList = nicknames = undefined ? <p>No nicknames added yet</p> : nicknames.map(name => {
         return(
-    <p className="nickname">{name.id}: {name.nickname}</p>
+    <p className="nickname">{name.nickname}</p>
         )
     }) 
 
     return(        
     <div className="card">
         <h2>{name}</h2>
-        <p>ID: {id}</p>
         <p>{sport}</p>
         <a href={reference}>More info</a>
-        <p>Nicknames and ID's</p>
+        <p>Nicknames</p>
         {nicknameList}
     </div>
     )

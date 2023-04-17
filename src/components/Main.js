@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import Filter from "./Filter";
-import Form from "./Form";
+import NewPlayerForm from "./NewPlayerForm";
+import NewNicknameForm from "./NewNicknameForm";
+import DeleteNickname from "./DeleteNickname";
+import UpdateNicknameForm from "./UpdateNicknameForm";
 
 function Main({ playersObjects, setPlayersObjects }) {
     let [player, setPlayer] = useState('')
@@ -21,7 +24,10 @@ function Main({ playersObjects, setPlayersObjects }) {
     return (
         <div>
             <h1>Player Nickname Library</h1>
-            <Form playersObjects = {playersObjects} setPlayersObjects={setPlayersObjects}/>
+            <NewPlayerForm playersObjects = {playersObjects} setPlayersObjects={setPlayersObjects}/>
+            <NewNicknameForm playersObjects = {playersObjects}/>
+            <DeleteNickname playersObjects = {playersObjects}/>
+            <UpdateNicknameForm playersObjects = {playersObjects}/>
             <Filter onPlayerChange={handlePlayerChange}/>
             <div className="card-container">{playersList}</div>
         </div>
