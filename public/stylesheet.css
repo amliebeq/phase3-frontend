@@ -91,10 +91,6 @@
     background-color: #3e8e41;
   }
   
-  input[type="number"] {
-    width: 250px;
-  }
-  
   input[type="text"] {
     width: 250px;
   }
@@ -138,20 +134,20 @@
 
   select {
     display: block;
-    width: 250px;
+    width: 259px;
     padding: 5px;
     border-radius: 5px;
     border: none;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
     background-color: #fff;
     color: #333;
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 10px;
   }
   
   select option {
     background-color: #fff;
     color: #333;
-    font-size: 16px;
+    font-size: 12px;
     margin-bottom: 10px;
   }
