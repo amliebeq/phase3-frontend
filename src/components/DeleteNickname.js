@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 
-function DeleteNickname ({ playersObjects }) {
+function DeleteNickname ({ playersObjects, setPlayersObjects }) {
     let [id, setId] = useState('')
 
     let handleIdChange = (e) => setId(e.target.value)
 
-    function handleDelete() {
+    function handleDelete(e) {
+        e.preventDefault()
         fetch (`http://localhost:9292/nicknames/${id}`, {
             method: 'DELETE',
         })
+        .then((r) => r.json())
+        .then((data) => setPlayersObjects(data))
+        setId('nil')
     }
 
     let handleSelectPlayer = () => playersObjects.map((player) => {

@@ -10,7 +10,9 @@ useEffect(() => {
   .then ((data) => setPlayersObjects(data))
 }, [])
 
-console.log(playersObjects)
+if (!playersObjects) {
+  return <h1>Loading</h1>
+}
 
   return (
     <div>

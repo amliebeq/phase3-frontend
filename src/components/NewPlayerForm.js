@@ -11,7 +11,8 @@ function NewPlayerForm({ playersObjects, setPlayersObjects }) {
     let handleReferenceChange = (e) => setReference(e.target.value)
     let handleOriginalNickname = (e) => setOriginalNickname(e.target.value)
 
-    function handleSubmit() {
+    function handleSubmit(e) {
+        e.preventDefault()
         const data = {
             name: name,
             sport: sport,
@@ -27,6 +28,10 @@ function NewPlayerForm({ playersObjects, setPlayersObjects }) {
         })
         .then((r) => r.json())
         .then((newPlayer) => setPlayersObjects([...playersObjects, newPlayer]))
+        setName('')
+        setSport('')
+        setReference('')
+        setOriginalNickname('')
     }
 
     return (

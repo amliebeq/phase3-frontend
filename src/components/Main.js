@@ -20,14 +20,16 @@ function Main({ playersObjects, setPlayersObjects }) {
         <Card key={player.id} id={player.id} name={player.name} sport={player.sport} reference={player.reference_url} nicknames={player.nicknames} />
         )
     })
+
+    console.log(playersObjects)
     
     return (
         <div>
             <h1>Player Nickname Library</h1>
             <NewPlayerForm playersObjects = {playersObjects} setPlayersObjects={setPlayersObjects}/>
-            <NewNicknameForm playersObjects = {playersObjects}/>
-            <DeleteNickname playersObjects = {playersObjects}/>
-            <UpdateNicknameForm playersObjects = {playersObjects}/>
+            <NewNicknameForm playersObjects = {playersObjects} setPlayersObjects={setPlayersObjects}/>
+            <DeleteNickname playersObjects = {playersObjects} setPlayersObjects={setPlayersObjects}/>
+            <UpdateNicknameForm playersObjects = {playersObjects} setPlayersObjects={setPlayersObjects}/>
             <Filter onPlayerChange={handlePlayerChange}/>
             <div className="card-container">{playersList}</div>
         </div>
