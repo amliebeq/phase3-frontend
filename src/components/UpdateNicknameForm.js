@@ -7,6 +7,13 @@ function UpdateNicknameForm ({ playersObjects, setPlayersObjects }) {
     let handleEditNickname = (e) => setEditNickname(e.target.value)
     let handleEditId = (e) => setEditId(e.target.value)
 
+    let changeNickname = (nickname) => {
+      let foundPLayer = playersObjects.find((athlete) => athlete.id == nickname.athlete_id)
+      let newPlayerNicknames = foundPLayer.nicknames.map(name => name.id === nickname.id ? nickname : name)
+      foundPLayer.nicknames=newPlayerNicknames
+      setPlayersObjects(playersObjects.map(player => player.id === foundPLayer.id ? foundPLayer : player))
+    }
+
     function handlePatch(e) {
         e.preventDefault();
         fetch(`http://localhost:9292/nicknames/${editId}`, {
@@ -19,11 +26,9 @@ function UpdateNicknameForm ({ playersObjects, setPlayersObjects }) {
           }),
         })
           .then((r) => r.json())
-          .then((data) => setPlayersObjects(data))
-          .then(() => {
-            setEditId("");
-            setEditNickname("");
-          });
+          .then((data) => changeNickname(data))
+          setEditId("");
+          setEditNickname("");
       }
       
       

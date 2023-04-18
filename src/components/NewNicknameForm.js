@@ -5,8 +5,15 @@ function NewNicknameForm ({ playersObjects, setPlayersObjects }) {
     let [athleteId, setAthleteId] = useState('nil')
 
     let handleNewNickname = (e) => setNewNickname(e.target.value)
-    let handleAthleteId = (e) => setAthleteId(e.target.value)
-    
+    let handleAthleteId = (e) => setAthleteId(e.target.value)    
+
+    let addNickname = (nickname) => {
+        let foundPLayer = playersObjects.find((athlete) => athlete.id == athleteId)
+        let newPlayerNicknames = [...foundPLayer.nicknames, nickname]
+        foundPLayer.nicknames=newPlayerNicknames
+        setPlayersObjects(playersObjects.map(player => player.id === foundPLayer.id ? foundPLayer : player))
+    }
+
     function handleNicknameSubmit (e) {
         e.preventDefault()
         let data = {
@@ -22,11 +29,11 @@ function NewNicknameForm ({ playersObjects, setPlayersObjects }) {
         })
         .then((r) => r.json())
         .then((data) => {
-            setPlayersObjects(data);
+            addNickname(data);
             setNewNickname('');
             setAthleteId('nil');
         });
-    }
+    }   
 
     let handleSelect = () => playersObjects.map(player => <option key={player.id} value={player.id}>{player.name}</option>)
     

@@ -5,13 +5,20 @@ function DeleteNickname ({ playersObjects, setPlayersObjects }) {
 
     let handleIdChange = (e) => setId(e.target.value)
 
+    let deleteNickname = (nickname) => {
+        let foundPLayer = playersObjects.find((athlete) => athlete.id == nickname.athlete_id)
+        let newPlayerNicknames = foundPLayer.nicknames.filter(name => name.id !== nickname.id)
+        foundPLayer.nicknames=newPlayerNicknames
+        setPlayersObjects(playersObjects.map(player => player.id === foundPLayer.id ? foundPLayer : player))
+    }
+
     function handleDelete(e) {
         e.preventDefault()
         fetch (`http://localhost:9292/nicknames/${id}`, {
             method: 'DELETE',
         })
         .then((r) => r.json())
-        .then((data) => setPlayersObjects(data))
+        .then((data) => deleteNickname(data))
         setId('nil')
     }
 
