@@ -19,7 +19,7 @@ function DeleteNickname ({ playersObjects, setPlayersObjects }) {
         })
         .then((r) => r.json())
         .then((data) => deleteNickname(data))
-        setId('nil')
+        setId('')
     }
 
     let handleSelectPlayer = () => playersObjects.map((player) => {
