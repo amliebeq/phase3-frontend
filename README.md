@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+My phase 3 project required a front end to interact with an API I created.
+This is a glossary of players, their sports refence pages, and their nicknames
+I used basketball reference, baseball reference, and wikipedia for the links and nicknames.
+This was separated into 4 form components, adding a player, adding a nickname, editing a nickname, and deleting a nickname
+I also added a filter to find players easier.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Commits:
+Commits on Apr 18, 2023
+updated crud again
 
-## Available Scripts
+@amliebeq
+amliebeq committed last week
+ 
+Commits on Apr 17, 2023
+made things stateful
 
-In the project directory, you can run:
+@amliebeq
+amliebeq committed last week
+ 
+added styling
 
-### `npm start`
+@amliebeq
+amliebeq committed last week
+ 
+added dropdowns
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+@amliebeq
+amliebeq committed last week
+ 
+Commits on Apr 10, 2023
+Added styling to center forms
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+@amliebeq
+amliebeq committed 2 weeks ago
+ 
+Added add a nickname upon creation of a new athlete
 
-### `npm test`
+@amliebeq
+amliebeq committed 2 weeks ago
+ 
+Commits on Apr 9, 2023
+Finished up fromnt end hopefully
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+@amliebeq
+amliebeq committed 2 weeks ago
+ 
+added more crud
 
-### `npm run build`
+@amliebeq
+amliebeq committed 2 weeks ago
+ 
+Commits on Apr 8, 2023
+added form
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+@amliebeq
+amliebeq committed 2 weeks ago
+ 
+added filter
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+@amliebeq
+amliebeq committed 2 weeks ago
+ 
+added cards
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+@amliebeq
+amliebeq committed 2 weeks ago
+ 
+Commits on Apr 7, 2023
+get request
 
-### `npm run eject`
+@amliebeq
+amliebeq committed 3 weeks ago
+ 
+Commits on Apr 6, 2023
+removed some files
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+@amliebeq
+amliebeq committed 3 weeks ago
+ 
+Initialize project using Create React App
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+@amliebeq
+amliebeq committed 3 weeks ago
